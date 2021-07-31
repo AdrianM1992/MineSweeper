@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="bomb.png" />
+    <None Remove="flag.png" />
+    <None Remove="obrys.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\bomb.png" />
+    <Resource Include="Images\flag.png" />
+  </ItemGroup>
+
+</Project>

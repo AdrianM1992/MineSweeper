@@ -1,0 +1,18 @@
+﻿<Window x:Name="DialogInput" x:Class="MineSweeper.DialogInupt"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MineSweeper"
+        mc:Ignorable="d"
+        Title="Enter name" Height="100" Width="200">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+        <Button x:Name="OkButton" Content="Save" Grid.Row="1" Click="OkButton_Click"/>
+        <TextBox x:Name="NameBox" Text="Enter name" TextWrapping="Wrap" Width="185" Height="30" TextAlignment="Center" MaxLines="1" HorizontalContentAlignment="Stretch" HorizontalAlignment="Stretch" VerticalContentAlignment="Center" VerticalAlignment="Center"/>
+
+    </Grid>
+</Window>

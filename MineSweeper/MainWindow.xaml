@@ -1,0 +1,41 @@
+﻿<Window x:Name="MineSweeper" x:Class="MineSweeper.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MineSweeper"
+        mc:Ignorable="d"
+        Title="MineSweeper" Height="200" Width="300" ResizeMode="NoResize">
+    <StackPanel x:Name="GameWindow" VerticalAlignment="Top">
+        <StackPanel x:Name="SettingField" VerticalAlignment="Stretch">
+            <Grid x:Name="SettingGrid" Height="120" VerticalAlignment="Stretch">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="80"/>
+                    <RowDefinition Height="40"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="75*"/>
+                    <ColumnDefinition Width="150"/>
+                    <ColumnDefinition Width="75*"/>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="1" x:Name="Start" Width="80" Height="30" Content="Start" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Start_Click" Margin="15,10,0,0"/>
+                <ComboBox Grid.Column="1" x:Name="DifficultyBox" Width="80" SelectionChanged="ComboBox_SelectionChanged" SnapsToDevicePixels="True" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="15,0,0,10" Height="25">
+                    <ComboBoxItem x:Name="Easy" Content="Easy" IsSelected="True"/>
+                    <ComboBoxItem x:Name="Medium" Content="Medium"/>
+                    <ComboBoxItem x:Name="Hard" Content="Hard"/>
+                </ComboBox>
+                <Label x:Name="EndGameLabel" Content="Press &quot;Start&quot; to begin." VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold" FontSize="16" Grid.Row="1" Grid.ColumnSpan="3" />
+                <Button x:Name="HighScoresButtton" Height="60" Width="40" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="100,10,10,0" Grid.Column="1" Click="HighScoresButtton_Click">
+                    <TextBlock x:Name="HighScoresTextBlock" Text="High Scores" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" FlowDirection="RightToLeft" TextAlignment="Center"/>
+                </Button>
+            </Grid>
+        </StackPanel>
+        <Grid x:Name="GameField" Height="0" />
+        <StatusBar Height="40" VerticalAlignment="Stretch">
+            <Label x:Name="Time" Content="Time:"/>
+            <Label x:Name="TimeLabel" Content="00:00:00:00" Width="70"/>
+            <Label x:Name="RemainingBombs" Content="Remaining bombs:"/>
+            <Label x:Name="RemainingBombsLabel" Content="0"/>
+        </StatusBar>
+    </StackPanel>
+</Window>
